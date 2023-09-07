@@ -18,11 +18,12 @@ router.post("/createAccount", (req, res) => {
   //return res.send(Account);
   Account.save()
     .then((data) => {
-      res
-        .status(201)
-        .send(
-          `Account created successfully!\nThis is your account number: ${data.accountNum}, and your Pin: ${data.pin}`
-        );
+      // res
+      //   .status(201)
+      //   .send(
+      //     `Account created successfully!\nThis is your account number: ${data.accountNum}, and your Pin: ${data.pin}`
+      //   );
+      res.status(201).send(data);
     })
     .catch((err) => {
       res.status(400).send(`Error: ${err}`);

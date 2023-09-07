@@ -3,8 +3,10 @@ const morgan = require("morgan");
 
 // Routes
 const routes = require("./routes/publicRoutes");
-const login = require("./routes/login");
 const admin = require("./routes/adminRoute");
+const login = require("./controllers/login");
+const info = require("./controllers/accInfo");
+const update = require("./controllers/updateAcc");
 
 require("./db/connect");
 
@@ -17,6 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", routes);
 app.use("/", login);
 app.use("/", admin);
+app.use("/", info);
+app.use("/", update);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
