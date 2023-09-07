@@ -4,7 +4,7 @@
 
 ### 1. Clone o repositório
 ```bash
-git@github.com:Cubes-Academy-Student/cubos_of_bank.git
+git@github.com:zeneiltongpdev/bank-of-cubos.git
 ```
 ### 2. Instalações necessárias:
 > 1. Instale as dependências com `npm i`
