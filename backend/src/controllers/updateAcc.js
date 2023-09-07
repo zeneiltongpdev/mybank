@@ -17,7 +17,11 @@ router.put("/updateAcc/:accNum", (req, res) => {
     )
     .then((data) => {
       if (data) {
-        return res.status(200).send(data);
+        return res
+          .status(200)
+          .send(
+            `Successful Updated Information!\nNew name: ${data.holderName}\nNew email: ${data.holderEmail}`
+          );
       } else {
         return res.status(400).send(`Error: ${err}`);
       }

@@ -1,6 +1,6 @@
 const express = require("express");
-const accountSchema = require("../config/accountSchema");
 const router = express.Router();
+const accountSchema = require("../config/accountSchema");
 
 router.get("/accInfo/:accNum", (req, res) => {
   const accountNum = req.params.accNum;

@@ -7,6 +7,7 @@ const admin = require("./routes/adminRoute");
 const login = require("./controllers/login");
 const info = require("./controllers/accInfo");
 const update = require("./controllers/updateAcc");
+const deposit = require("./controllers/deposit");
 
 require("./db/connect");
 
@@ -21,6 +22,7 @@ app.use("/", login);
 app.use("/", admin);
 app.use("/", info);
 app.use("/", update);
+app.use("/", deposit);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
