@@ -8,6 +8,7 @@ const accountSchema = new mongoose.Schema({
   holderEmail: {
     type: String,
     required: true,
+    unique: true,
   },
   accountNum: {
     type: Number,

@@ -48,7 +48,7 @@ router.post("/transfer", async (req, res) => {
       return res.send(`Error: Failed Transfer, Accounts are equal!`);
     }
     return res.send(
-      `Successful Transfer!\nThe amount of:\n${withTransac.amount}, was sent account: ${debTransac.accountNum2}`
+      `Successful Transfer!\nThe amount of: ${withTransac.amount}, was sent account: ${debTransac.accountNum2}`
     );
     //res.status(200).send(`${withTransac}\n${debTransac}`);
   } catch (err) {
