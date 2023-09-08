@@ -15,11 +15,11 @@ const transactionSchema = new mongoose.Schema({
     required: true,
   },
   accountNum: {
-    type: String,
+    type: Number,
     required: true,
   },
   accountNum2: {
-    type: String ,
+    type: Number,
     required: false,
   },
   date: {

@@ -2,36 +2,38 @@ const express = require("express");
 const router = express.Router();
 const transactionSchema = require("../config/transactionSchema");
 const { depositAmount } = require("../models/transHelper");
-//const accountSchema = require("../config/accountSchema");
 
 const date = new Date().toLocaleDateString();
 const hour = new Date().toLocaleTimeString();
 
-router.post("/deposit", (req, res) => {
+router.post("/deposit", async (req, res) => {
   const { perior, amount, accountNum } = req.body;
 
-  try {
-    depositAmount(accountNum, amount);
-  } catch (error) {
-    return res.status(400).send(`Error: ${error}`);
+  const result = await depositAmount(accountNum, amount);
+
+  if (result == null) {
+    return res.status(500).send("Error: Account not found!");
   }
 
   const Transaction = new transactionSchema({
-    perior: perior,
+    perior,
     type: "DEPOSIT",
-    amount: amount,
-    accountNum: accountNum,
-    date: date,
-    hour: hour,
+    amount,
+    accountNum,
+    date,
+    hour,
   });
 
-  //return res.send(Transaction);
   Transaction.save()
     .then((data) => {
-      res.status(201).send(data);
+      res.send(
+        `Successful Deposit!\nAccount: ${data.accountNum} | Amount: ${data.amount}`
+      );
+      //res.status(201).send(data);
     })
     .catch((err) => {
-      res.status(400).send(`Error: ${err}`);
+      res.status(400).send(`Failed Deposit!\nError: ${err}`);
+      //res.status(400).send(`Error: ${err}`);
     });
 });
 

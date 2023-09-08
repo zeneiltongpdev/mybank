@@ -1,47 +1,82 @@
 const accountSchema = require("../config/accountSchema");
-//const transactionSchema = require("../config/transactionSchema");
 
+async function depositAmount(accountNum, amount) {
+  const data = await accountSchema.findOne({ accountNum: accountNum });
 
+  if (!data) {
+    return null;
+  }
 
-
-
-const depositAmount = (accountNum, amount) => {
-  accountSchema.findOne({ accountNum: accountNum }, (err, data) => {
-    if (err || data == "") {
-      return new Error("Failed ");
-    } else {
-      accountSchema.findOneAndUpdate(
-        { accountNum: accountNum },
-        {
-          $set: {
-            balance: data.balance + amount,
-          },
-        },
-        (err) => {
-          if (err) {
-            return new Error("Failed ");
-          }
-        }
-      );
+  const update = await accountSchema.findOneAndUpdate(
+    { accountNum: accountNum },
+    {
+      $set: {
+        balance: data.balance + amount,
+      },
     }
-  });
-};
+  );
+  if (!update) {
+    return null;
+  } else {
+    return update;
+  }
+}
 
+async function withdrawAmount(accountNum, amount) {
+  const data = await accountSchema.findOne({ accountNum: accountNum });
 
-// const depositAmount = (accountNum, amount) => {
-//   const data = accountSchema.findOne({ accountNum: accountNum });
-//   if (data == "") {
-//     return new Error(`Account not found! Error: ${err}`);
-//   } else {
-//     accountSchema.findOneAndUpdate(
-//       { accountNum: accountNum },
-//       {
-//         $set: {
-//           balance: data.balance + amount,
-//         },
-//       }
-//     );
-//   }
-// };
+  if (!data) {
+    return null;
+  } else if (data.balance < amount) {
+    return null;
+  }
 
-module.exports = { depositAmount };
+  const update = await accountSchema.findOneAndUpdate(
+    { accountNum: accountNum },
+    {
+      $set: {
+        balance: data.balance - amount,
+      },
+    }
+  );
+  if (!update) {
+    return null;
+  } else {
+    return update;
+  }
+}
+
+async function transferAmount(accountNum, accountNum2, amount) {
+  const accountOrig = await accountSchema.findOne({ accountNum: accountNum });
+  const accountDest = await accountSchema.findOne({ accountNum: accountNum2 }); //accountDest = account destination
+
+  if (!accountOrig || !accountDest) {
+    return null;
+  } else if (accountOrig.balance < amount) {
+    return null;
+  } else {
+    const updateOrig = await accountSchema.findOneAndUpdate(
+      { accountNum: accountNum },
+      {
+        $set: {
+          balance: accountOrig.balance - amount,
+        },
+      }
+    );
+    const updateDest = await accountSchema.findOneAndUpdate(
+      { accountNum: accountNum2 },
+      {
+        $set: {
+          balance: accountDest.balance + amount,
+        },
+      }
+    );
+    if (!updateOrig || !updateDest) {
+      return null;
+    } else {
+      return updateOrig, updateDest;
+    }
+  }
+}
+
+module.exports = { depositAmount, withdrawAmount, transferAmount };

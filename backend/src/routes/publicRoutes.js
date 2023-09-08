@@ -17,7 +17,7 @@ router.post("/register", (req, res) => {
       res
         .status(201)
         .send(`User registered successfully, welcome ${data.name}`);
-      //res.send(User);
+      //res.send(data);
     })
     .catch((err) => {
       res.status(400).send(`User already exists | Error: ${err}`);
