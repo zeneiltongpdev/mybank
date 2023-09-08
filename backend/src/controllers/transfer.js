@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const transactionSchema = require("../config/transactionSchema");
-const { transferAmount } = require("../models/transHelper");
+const { transferAmount } = require("../utils/transHelper");
 
 const date = new Date().toLocaleDateString();
 const hour = new Date().toLocaleTimeString();
@@ -12,7 +12,9 @@ router.post("/transfer", async (req, res) => {
   const result = await transferAmount(accountNum, accountNum2, amount);
 
   if (result == null) {
-    return res.status(500).send("Error: Account not found!");
+    return res
+      .status(500)
+      .send("Error: Failed Transfer!\nThe account balance is insufficient!");
   }
 
   const withTransac = new transactionSchema({
@@ -38,6 +40,13 @@ router.post("/transfer", async (req, res) => {
   try {
     await withTransac.save();
     await debTransac.save();
+
+    if (
+      withTransac.accountNum === withTransac.accountNum2 ||
+      debTransac.accountNum === debTransac.accountNum2
+    ) {
+      return res.send(`Error: Failed Transfer, Accounts are equal!`);
+    }
     return res.send(
       `Successful Transfer!\nThe amount of:\n${withTransac.amount}, was sent account: ${debTransac.accountNum2}`
     );

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const transactionSchema = require("../config/transactionSchema");
-const { withdrawAmount } = require("../models/transHelper");
+const { withdrawAmount } = require("../utils/transHelper");
 
 const date = new Date().toLocaleDateString();
 const hour = new Date().toLocaleTimeString();

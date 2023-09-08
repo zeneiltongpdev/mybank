@@ -3,20 +3,19 @@ const router = express.Router();
 const accountSchema = require("../config/accountSchema");
 const transactionSchema = require("../config/transactionSchema");
 
-router.get("/accInfo/:accNum", (req, res) => {
+// List account information
+router.get("/info/:accNum", (req, res) => {
   const accountNum = req.params.accNum;
 
   accountSchema
     .findOne({ accountNum: accountNum })
     .then((data) => {
       if (data) {
-        return res.status(200).send(
-          `Account Data:\n
-           Number: ${data.accountNum}\n
-           Balance: ${data.balance}\n
-           Name: ${data.holderName}\n
-           Email: ${data.holderEmail}`
-        );
+        return res
+          .status(200)
+          .send(
+            `Account Informations:\n\nNumber: ${data.accountNum}\nBalance: ${data.balance}\nName: ${data.holderName}\nEmail: ${data.holderEmail}`
+          );
         //return res.status(200).send(data);
       } else {
         return res.status(400).send(`Error: The account was not found`);
@@ -27,7 +26,8 @@ router.get("/accInfo/:accNum", (req, res) => {
     });
 });
 
-router.get("/accTransations/:accNum", (req, res) => {
+// List all transactions
+router.get("/transations/:accNum", (req, res) => {
   const accountNum = req.params.accNum;
 
   transactionSchema.find({ accountNum: accountNum }).then((data) => {
@@ -39,7 +39,8 @@ router.get("/accTransations/:accNum", (req, res) => {
   });
 });
 
-router.delete("/accDelete/:accNum", (req, res) => {
+// Delete a account
+router.delete("/delete/:accNum", (req, res) => {
   const accountNum = req.params.accNum;
   transactionSchema.deleteMany({ accountNum: accountNum }).then((data) => {
     if (data) {
@@ -63,11 +64,11 @@ router.delete("/accDelete/:accNum", (req, res) => {
   });
 });
 
-router.get("/accListAll", (req, res) => {
+// List all accounts
+router.get("/list", (req, res) => {
   accountSchema.find().then((data) => {
     if (data) {
-      return res.status(200).send(`Accounts List:\n${data}`);
-      //return res.status(200).send(data);
+      return res.status(200).send(data);
     } else {
       return res.status(400).send(`Error: ${err}`);
     }

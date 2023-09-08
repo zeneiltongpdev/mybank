@@ -2,7 +2,7 @@ const express = require("express");
 const accountSchema = require("../config/accountSchema");
 const router = express.Router();
 
-router.put("/updateAcc/:accNum", (req, res) => {
+router.put("/update/:accNum", (req, res) => {
   const accNum = req.params.accNum;
   const { name, email } = req.body;
 
