@@ -16,7 +16,7 @@ router.post("/register", (req, res) => {
     .then((data) => {
       res
         .status(201)
-        .send(`User registered successfully, this is your id: ${data._id}`);
+        .send(`User registered successfully, welcome ${data.name}`);
       //res.send(User);
     })
     .catch((err) => {

@@ -8,6 +8,8 @@ const login = require("./controllers/login");
 const info = require("./controllers/accInfo");
 const update = require("./controllers/updateAcc");
 const deposit = require("./controllers/deposit");
+const withdraw = require("./controllers/withdraw");
+const transfer = require("./controllers/transfer");
 
 require("./db/connect");
 
@@ -23,6 +25,8 @@ app.use("/", admin);
 app.use("/", info);
 app.use("/", update);
 app.use("/", deposit);
+app.use("/", withdraw);
+app.use("/", transfer);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
