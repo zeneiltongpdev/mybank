@@ -1,5 +1,18 @@
 # Banco da Cubos Acadamy
 
+## Descrição do Projeto:
+
+O Banco da Cubos Academy é uma aplicação bancária online desenvolvida em Node.js com a utilização do framework Express é uma plataforma segura e eficiente que permite aos usuários realizar diversas operações financeiras, incluindo a criação de contas, gerenciamento de saldos e registro de transações. 
+
+A aplicação oferece as seguintes funcionalidades principais:
+
+> 1. Cadastro de Contas: Os usuários podem criar facilmente contas bancárias fornecendo informações pessoais básicas, como nome, e-mail, usuário e senha.
+> 2. Login e Autenticação: A aplicação garante a segurança dos dados dos usuários com um sistema de autenticação robusto, exigindo login com senha para acessar as contas.
+> 3. Gestão de Contas: Os clientes podem visualizar informações detalhadas de suas contas, incluindo saldo atual, histórico de transações e informações pessoais.
+> 4. Movimentações Financeiras: Os usuários podem realizar diversas transações financeiras, incluindo depósitos, saques e transferências entre contas.
+> 5. Histórico de Transações: Cada transação é registrada e exibida no histórico de transações do usuário, fornecendo um registro completo das atividades financeiras.
+> 6. Segurança: A aplicação prioriza a segurança, implementando medidas de segurança robustas para proteger informações sensíveis e prevenir atividades fraudulentas com JWT.
+
 ## Por onde Comerçar?
 ```bash
 # Comerce pelo Back-end
@@ -61,6 +74,12 @@ cd backend
 
 #### E então, use o comando abaixo para rodar o projeto:
 > 4. Aplique o comando: `npm start` para rodar o backend
+
+#### O backend está rodando na porta 3000, então acesse: [http://localhost:3000](http://localhost:3000)
+
+## Para facilitar a execução dos testes, utilize o Thunder Client:
+> 1. Foi disponibilizado um arquivo com as rotas para facilitar a execução dos testes, basta importar o arquivo `thunder-collection_bank-of-cubos.json` no Thunder Client.
+> 2. O arquivo está na pasta `backend/src/utils/` do projeto.
 
 ## Neste ponto o backend já deve está rodando, agora vamos para o Front-end...
 
