@@ -70,7 +70,7 @@ cd backend
 cd frontend
 ```
 > 1. Instale as dependências com `npm i`
-> 2. Instale o react-router com `npm i react-router-dom@6` neste caso estamos usando a versão 6.
+> 2. Instale o Axios + Routes com `npm i axios react-router-dom@6`
 
 
 ### 4. Ferramentas utilizadas:
