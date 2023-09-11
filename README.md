@@ -76,7 +76,7 @@ cd backend
 </details>
 
 #### E então, use o comando abaixo para rodar o projeto:
-> 4. Aplique o comando: `npm start` para rodar o backend
+> Aplique o comando: `npm start` para rodar o backend
 
 #### O backend está rodando na porta 3000, então acesse: [http://localhost:3000](http://localhost:3000)
 
