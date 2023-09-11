@@ -1,12 +1,22 @@
 # Banco da Cubos Acadamy
 
-## Como Rodar o Projeto
-
+## Por onde Comerçar?
+```bash
+# Comerce pelo Back-end
+# Clone o repositório
+# Instale as dependências
+# Rode o Back-end
+# siga os passos abaixo
+```
 ### 1. Clone o repositório
 ```bash
 git@github.com:zeneiltongpdev/bank-of-cubos.git
 ```
 ### 2. Instalações necessárias:
+*Após o clone do repositório, entre na pasta do back-end e execute os comandos abaixo:*
+```bash
+cd backend
+```
 > 1. Instale as dependências com `npm i`
 > 2. Instale o express com `npm i express`
 > 3. Instale o nodemon com `npm i -D morgan nodemon`
@@ -50,7 +60,18 @@ git@github.com:zeneiltongpdev/bank-of-cubos.git
 </details>
 
 #### E então, use o comando abaixo para rodar o projeto:
-> 4. Aplique o comando: `npm start`
+> 4. Aplique o comando: `npm start` para rodar o backend
+
+## Neste ponto o backend já deve está rodando, agora vamos para o Front-end...
+
+### 1. Instalações necessárias:
+*Com o clone do repositório já realizado, entre na pasta do frontend e execute os comandos abaixo:*
+```bash
+cd frontend
+```
+> 1. Instale as dependências com `npm i`
+> 2. Instale o react-router com `npm i react-router-dom@6` neste caso estamos usando a versão 6.
+
 
 ### 4. Ferramentas utilizadas:
 

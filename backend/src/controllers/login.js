@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const userSchema = require("../config/userSchema");
+const { generateToken } = require("../extras/jwt");
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
@@ -16,9 +17,8 @@ router.post("/login", async (req, res) => {
       password: password,
     })
     .then((data) => {
-      res
-        .status(201)
-        .send(`Successfully logged, Welcome to your Bank: ${data.name}`);
+      res.json({token: generateToken(username._id)});
+        //.status(201).send(`Successfully logged, Welcome to your Bank: ${data.name}`);
       //res.send(data);
     })
     .catch((err) => {
