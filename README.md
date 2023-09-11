@@ -87,11 +87,11 @@ cd backend
 
 ## Neste ponto o backend já deve está rodando, agora vamos para o Front-end...
 
-### 1. Instalações necessárias:
 *Com o clone do repositório já realizado, entre na pasta do frontend e execute os comandos abaixo:*
 ```bash
 cd frontend
 ```
+### Instalações necessárias:
 > 1. Instale as dependências com `npm i`
 > 2. Instale o Axios + Routes com `npm i axios react-router-dom@6`
 > 3. E por ultimo, execute o comando `npm run dev` para rodar o frontend. (Que ainda está em desenvolvimento).
