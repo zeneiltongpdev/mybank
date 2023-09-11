@@ -2,7 +2,8 @@
 
 ## Descrição do Projeto:
 
-O Banco da Cubos Academy é uma aplicação bancária online desenvolvida em Node.js com a utilização do framework Express é uma plataforma segura e eficiente que permite aos usuários realizar diversas operações financeiras, incluindo a criação de contas, gerenciamento de saldos e registro de transações. 
+O Banco da Cubos Academy é uma aplicação bancária online desenvolvida em Node.js com a utilização do framework Express e Banco de Dados utilizando o MongoDB.
+É uma plataforma segura e eficiente que permite aos usuários realizar diversas operações financeiras, incluindo a criação de contas, gerenciamento de saldos e registro de transações. 
 
 A aplicação oferece as seguintes funcionalidades principais:
 
@@ -12,6 +13,8 @@ A aplicação oferece as seguintes funcionalidades principais:
 > 4. Movimentações Financeiras: Os usuários podem realizar diversas transações financeiras, incluindo depósitos, saques e transferências entre contas.
 > 5. Histórico de Transações: Cada transação é registrada e exibida no histórico de transações do usuário, fornecendo um registro completo das atividades financeiras.
 > 6. Segurança: A aplicação prioriza a segurança, implementando medidas de segurança robustas para proteger informações sensíveis e prevenir atividades fraudulentas com JWT.
+
+Este projeto visa fornecer uma solução completa e escalável para serviços bancários online, com foco na segurança e facilidade de uso. Ele utiliza tecnologias modernas como Node.js e Express para criar uma aplicação web confiável e de alto desempenho.
 
 ## Por onde Comerçar?
 ```bash
@@ -77,7 +80,8 @@ cd backend
 
 #### O backend está rodando na porta 3000, então acesse: [http://localhost:3000](http://localhost:3000)
 
-## Para facilitar a execução dos testes, utilize o Thunder Client:
+## Para realização e a execução dos testes, foi utilizado o Thunder Client neste projeto:
+**Recomendo a utilização do Mesmo**
 > 1. Foi disponibilizado um arquivo com as rotas para facilitar a execução dos testes, basta importar o arquivo `thunder-collection_bank-of-cubos.json` no Thunder Client.
 > 2. O arquivo está na pasta `backend/src/utils/` do projeto.
 
@@ -90,18 +94,22 @@ cd frontend
 ```
 > 1. Instale as dependências com `npm i`
 > 2. Instale o Axios + Routes com `npm i axios react-router-dom@6`
+> 3. E por ultimo, execute o comando `npm run dev` para rodar o frontend. (Que ainda está em desenvolvimento).
 
+## Ferramentas e Tecnologias Utilizadas:
 
-### 4. Ferramentas utilizadas:
+![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
+![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js)
+![Express](https://img.shields.io/badge/-Express-black?style=flat-square&logo=express)
+![Mongoose](https://img.shields.io/badge/-Mongoose-black?style=flat-square&logo=mongoose)
+![MongoDB](https://img.shields.io/badge/-MongoDB-black?style=flat-square&logo=mongodb)
+![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react)
+![React Router](https://img.shields.io/badge/-React%20Router-black?style=flat-square&logo=react-router)
+![Vite](https://img.shields.io/badge/-Vite-black?style=flat-square&logo=vite)
+![Thunder Client](https://img.shields.io/badge/-Thunder%20Client-black?style=flat-square&logo=thunder-client)
+![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-black?style=flat-square&logo=visual-studio-code)
+![Git](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)
+![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)
 
-- [Node.js](https://nodejs.org/en/download/)
-- [Express](https://expressjs.com/pt-br/)
-- [Mongoose](https://mongoosejs.com/)
-- [MongoDB](https://www.mongodb.com/try/download/community)
-- [React](https://pt-br.reactjs.org/)
-- [React Router](https://reactrouter.com/en/6.15.0)
-- [Vite](https://vitejs.dev/)
-- [Thunder Client](https://www.thunderclient.com/)
-- [Visual Studio Code](https://code.visualstudio.com/download)
-- [Git](https://git-scm.com/downloads)
-- [GitHub](https://github.com/)
+## Autor:
+- [Zeneilton Granja de Paulo](https://github.com/zeneiltongpdev)
