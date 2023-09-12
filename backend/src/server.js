@@ -1,11 +1,11 @@
 const express = require("express");
 const morgan = require("morgan");
-const { authMiddleware } = require("./extras/jwt");
+//const { authMiddleware } = require("./extras/jwt");
 const cors = require("cors");
-
 
 // Routes
 const routes = require("./routes/publicRoutes");
+const admin = require("./routes/adminRoute");
 //const admin, authMiddleware, require("./routes/adminRoute");
 const login = require("./controllers/login");
 const info = require("./controllers/accInfo");
@@ -25,7 +25,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/", routes);
 app.use("/", login);
-app.use("/admin", authMiddleware, require("./routes/adminRoute"));
+app.use("/", admin);
+//app.use("/admin", authMiddleware, require("./routes/adminRoute"));
 app.use("/", info);
 app.use("/", update);
 app.use("/", deposit);

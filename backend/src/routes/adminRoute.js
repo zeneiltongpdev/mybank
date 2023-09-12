@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const accountSchema = require("../config/accountSchema");
+//const server = require("../../../frontend/src/App")
 
 router.post("/createAccount", (req, res) => {
+//server.post("/createAccount", (req, res) => {
   const { name, email, initBalance } = req.body;
   const accountNum = Math.floor(Math.random() * 1000000);
   const pin = Math.floor(Math.random() * 10000);
