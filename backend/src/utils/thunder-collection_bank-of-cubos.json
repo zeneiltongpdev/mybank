@@ -1,203 +1,203 @@
 {
-    "client": "Thunder Client",
-    "collectionName": "bank-of-cubos",
-    "dateExported": "2023-09-11T22:17:31.628Z",
-    "version": "1.1",
-    "folders": [],
-    "requests": [
+  "client": "Thunder Client",
+  "collectionName": "bank-of-cubos",
+  "dateExported": "2023-09-11T22:17:31.628Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "560b954d-81b9-45ce-bc1e-d704d831ebf9",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "register",
+      "url": "http://localhost:3000/register",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2023-09-07T04:46:38.952Z",
+      "modified": "2023-09-08T02:30:27.451Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\":\"Zeneitlon Granja\",\n  \"email\":\"zeneiltongranja@gmail.com\",\n  \"username\":\"roberto\",\n  \"password\":\"pass123\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "4425a7d5-74cc-4da3-8d96-a63d63b0de49",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "login",
+      "url": "http://localhost:3000/login",
+      "method": "POST",
+      "sortNum": 20000,
+      "created": "2023-09-07T04:47:12.431Z",
+      "modified": "2023-09-07T04:50:19.062Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"username\":\"Zenel\",\n  \"password\":\"pass123\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "76c77ebd-d430-4c6e-a039-a3eb895138c4",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "create-acc",
+      "url": "http://localhost:3000/admin/createAccount",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2023-09-07T05:15:40.027Z",
+      "modified": "2023-09-11T20:16:11.854Z",
+      "headers": [
         {
-            "_id": "560b954d-81b9-45ce-bc1e-d704d831ebf9",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "register",
-            "url": "http://localhost:3000/register",
-            "method": "POST",
-            "sortNum": 10000,
-            "created": "2023-09-07T04:46:38.952Z",
-            "modified": "2023-09-08T02:30:27.451Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"name\":\"Zeneitlon Granja\",\n  \"email\":\"zeneiltongranja@gmail.com\",\n  \"username\":\"roberto\",\n  \"password\":\"pass123\"\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "4425a7d5-74cc-4da3-8d96-a63d63b0de49",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "login",
-            "url": "http://localhost:3000/login",
-            "method": "POST",
-            "sortNum": 20000,
-            "created": "2023-09-07T04:47:12.431Z",
-            "modified": "2023-09-07T04:50:19.062Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"username\":\"Zenel\",\n  \"password\":\"pass123\"\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "76c77ebd-d430-4c6e-a039-a3eb895138c4",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "create-acc",
-            "url": "http://localhost:3000/admin/createAccount",
-            "method": "POST",
-            "sortNum": 30000,
-            "created": "2023-09-07T05:15:40.027Z",
-            "modified": "2023-09-11T20:16:11.854Z",
-            "headers": [
-                {
-                    "name": "Authorization",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQ0NjI1MjcsImV4cCI6MTY5NDQ2NjEyN30.dDckATiPH0aLambLLwyFzLJeeHRIVLJuk2EUu5ZUfzQ"
-                }
-            ],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"name\":\"Teste\",\n  \"email\":\"testedemudanca@gmail.com\",\n  \"initBalance\":1000\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "82164d85-cf97-4454-ae74-37b5fdd3f8ae",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "find-acc",
-            "url": "http://localhost:3000/info/177249",
-            "method": "GET",
-            "sortNum": 40000,
-            "created": "2023-09-07T05:35:22.813Z",
-            "modified": "2023-09-08T06:06:40.251Z",
-            "headers": [],
-            "params": [],
-            "tests": []
-        },
-        {
-            "_id": "dcebaa69-72d0-43ad-b8c1-33d9e6c0e02b",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "updade-acc",
-            "url": "http://localhost:3000/updateAcc/127131",
-            "method": "PUT",
-            "sortNum": 50000,
-            "created": "2023-09-07T05:53:00.998Z",
-            "modified": "2023-09-08T05:21:10.652Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"name\":\"José Muzy\",\n  \"email\":\"zezinho@gmail.com\"\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "68dacb60-fccb-4bae-8e90-0b6f9adf8de7",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "deposit",
-            "url": "http://localhost:3000/deposit",
-            "method": "POST",
-            "sortNum": 60000,
-            "created": "2023-09-07T06:28:53.472Z",
-            "modified": "2023-09-08T05:31:19.240Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"perior\":\"Bank\",\n  \"amount\":1000,\n  \"accountNum\":441929\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "6f0e8072-553c-414d-8e1b-8b818d587d8f",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "transfer",
-            "url": "http://localhost:3000/transfer",
-            "method": "POST",
-            "sortNum": 70000,
-            "created": "2023-09-07T06:52:12.461Z",
-            "modified": "2023-09-08T05:48:20.083Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"perior\":\"Transfer\",\n  \"amount\":900,\n  \"accountNum\":177249,\n  \"accountNum2\":441929\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "35baa102-ff46-472e-a311-058270eeee1a",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "withdraw",
-            "url": "http://localhost:3000/withdraw",
-            "method": "POST",
-            "sortNum": 80000,
-            "created": "2023-09-08T03:35:52.670Z",
-            "modified": "2023-09-08T05:52:42.783Z",
-            "headers": [],
-            "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"perior\":\"Bank\",\n  \"amount\":100,\n  \"accountNum\":177249\n}",
-                "form": []
-            },
-            "tests": []
-        },
-        {
-            "_id": "b5d2887b-922a-4719-b0ca-be5ea757ddde",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "transations",
-            "url": "http://localhost:3000/transations/177249",
-            "method": "GET",
-            "sortNum": 90000,
-            "created": "2023-09-08T04:25:50.486Z",
-            "modified": "2023-09-08T06:02:54.473Z",
-            "headers": [],
-            "params": [],
-            "tests": []
-        },
-        {
-            "_id": "723eb5b2-b39b-4a25-a1a4-7ea075ce1312",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "delete-acc",
-            "url": "http://localhost:3000/delete/755",
-            "method": "DELETE",
-            "sortNum": 100000,
-            "created": "2023-09-08T04:46:45.036Z",
-            "modified": "2023-09-11T20:25:21.239Z",
-            "headers": [],
-            "params": [],
-            "tests": []
-        },
-        {
-            "_id": "32872af2-f491-4c4f-9008-044ce1edc3bb",
-            "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
-            "containerId": "",
-            "name": "list-acc",
-            "url": "http://localhost:3000/list",
-            "method": "GET",
-            "sortNum": 110000,
-            "created": "2023-09-08T05:10:58.085Z",
-            "modified": "2023-09-08T06:12:14.965Z",
-            "headers": [],
-            "params": [],
-            "tests": []
+          "name": "Authorization",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQ0NjI1MjcsImV4cCI6MTY5NDQ2NjEyN30.dDckATiPH0aLambLLwyFzLJeeHRIVLJuk2EUu5ZUfzQ"
         }
-    ]
+      ],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\":\"Teste\",\n  \"email\":\"testedemudanca@gmail.com\",\n  \"initBalance\":1000\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "82164d85-cf97-4454-ae74-37b5fdd3f8ae",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "find-acc",
+      "url": "http://localhost:3000/info/177249",
+      "method": "GET",
+      "sortNum": 40000,
+      "created": "2023-09-07T05:35:22.813Z",
+      "modified": "2023-09-08T06:06:40.251Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "dcebaa69-72d0-43ad-b8c1-33d9e6c0e02b",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "updade-acc",
+      "url": "http://localhost:3000/update/127131",
+      "method": "PUT",
+      "sortNum": 50000,
+      "created": "2023-09-07T05:53:00.998Z",
+      "modified": "2023-09-08T05:21:10.652Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\":\"José Muzy\",\n  \"email\":\"zezinho@gmail.com\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "68dacb60-fccb-4bae-8e90-0b6f9adf8de7",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "deposit",
+      "url": "http://localhost:3000/deposit",
+      "method": "POST",
+      "sortNum": 60000,
+      "created": "2023-09-07T06:28:53.472Z",
+      "modified": "2023-09-08T05:31:19.240Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"perior\":\"Bank\",\n  \"amount\":1000,\n  \"accountNum\":441929\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "6f0e8072-553c-414d-8e1b-8b818d587d8f",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "transfer",
+      "url": "http://localhost:3000/transfer",
+      "method": "POST",
+      "sortNum": 70000,
+      "created": "2023-09-07T06:52:12.461Z",
+      "modified": "2023-09-08T05:48:20.083Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"perior\":\"Transfer\",\n  \"amount\":900,\n  \"accountNum\":177249,\n  \"accountNum2\":441929\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "35baa102-ff46-472e-a311-058270eeee1a",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "withdraw",
+      "url": "http://localhost:3000/withdraw",
+      "method": "POST",
+      "sortNum": 80000,
+      "created": "2023-09-08T03:35:52.670Z",
+      "modified": "2023-09-08T05:52:42.783Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"perior\":\"Bank\",\n  \"amount\":100,\n  \"accountNum\":177249\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "b5d2887b-922a-4719-b0ca-be5ea757ddde",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "transations",
+      "url": "http://localhost:3000/transations/177249",
+      "method": "GET",
+      "sortNum": 90000,
+      "created": "2023-09-08T04:25:50.486Z",
+      "modified": "2023-09-08T06:02:54.473Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "723eb5b2-b39b-4a25-a1a4-7ea075ce1312",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "delete-acc",
+      "url": "http://localhost:3000/delete/755",
+      "method": "DELETE",
+      "sortNum": 100000,
+      "created": "2023-09-08T04:46:45.036Z",
+      "modified": "2023-09-11T20:25:21.239Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "32872af2-f491-4c4f-9008-044ce1edc3bb",
+      "colId": "795bff5e-ce98-41a6-9b93-cbc85e5f7679",
+      "containerId": "",
+      "name": "list-acc",
+      "url": "http://localhost:3000/list",
+      "method": "GET",
+      "sortNum": 110000,
+      "created": "2023-09-08T05:10:58.085Z",
+      "modified": "2023-09-08T06:12:14.965Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    }
+  ]
 }
