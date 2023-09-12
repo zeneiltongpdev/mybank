@@ -1,34 +1,26 @@
-/* eslint-disable react/jsx-key */
 import server from "../src/service/api";
 import { useState, useEffect } from "react";
-//import { useEffect } from "react";
 
 function App() {
   const [users, setUsers] = useState([]);
 
-  server
-    .get("/list")
-    .then((res) => {
-      console.log(res.data);
-      setUsers(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  async function loadUsers() {
+    try {
+      const response = await server.get("/list");
+      setUsers(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   useEffect(() => {
-    server.get("/list").then((res) => {
-      console.log(res.data);
-      setUsers(res.data);
-    });
-    // .catch((err) => {
-    //   console.log(err);
-    // });
+    loadUsers();
   }, []);
 
   return (
     <div className="App">
-      <h1>App</h1>
+      <h1>Welcome to Back of Cubos</h1>
+      <h2>Users List</h2>
       <ul>
         {users.map((user) => (
           <li key={user._id}>
