@@ -142,4 +142,4 @@ cd frontend
 
 ## Licença MIT:
 
-- [MIT - License](https://github.com/zeneiltongpdev/bank-of-cubos/blob/main/LICENSE)
+- [MIT - License](https://raw.githubusercontent.com/zeneiltongpdev/bank-of-cubos/main/LICENSE)
