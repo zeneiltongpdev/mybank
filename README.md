@@ -37,6 +37,11 @@ cd backend
 > 2. Instale o express com `npm i express`
 > 3. Instale o nodemon com `npm i -D morgan nodemon`
 
+*Instale as dependências abaixo para o banco de dados caso algo não funcione:*
+> 4. Instale o mongoose com `npm i mongoose`
+> 5. Instale o dotenv com `npm i dotenv` (opcional)
+> 6. Instale o cors com `npm i cors`
+
 ### 3. Rode o projeto:
 **Antes de rodar o projeto, certifique-se de que o banco de dados está rodando.**
 

@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const { authMiddleware } = require("./extras/jwt");
+const cors = require("cors");
 
 
 // Routes
@@ -17,6 +18,7 @@ require("./db/connect");
 
 const port = 3000;
 const app = express();
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

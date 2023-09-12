@@ -1,14 +1,43 @@
-import { Route, Routes } from "react-router-dom";
-import Layout from "./pages/Layout";
+/* eslint-disable react/jsx-key */
+import server from "../src/service/api";
+import { useState, useEffect } from "react";
+//import { useEffect } from "react";
 
 function App() {
+  const [users, setUsers] = useState([]);
+
+  server
+    .get("/list")
+    .then((res) => {
+      console.log(res.data);
+      setUsers(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+  useEffect(() => {
+    server.get("/list").then((res) => {
+      console.log(res.data);
+      setUsers(res.data);
+    });
+    // .catch((err) => {
+    //   console.log(err);
+    // });
+  }, []);
+
   return (
-    <Routes>
-      <Route path='/' element={<Layout/>} />
-      <Route index element={<h1> Welcome </h1>} />
-      <Route path='*' element={<h1> Not Found </h1>} />
-      <Route path='about' element={<h1> About </h1>} />
-    </Routes>
+    <div className="App">
+      <h1>App</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user._id}>
+            Account Number: {user.accountNum} - Name: {user.holderName} -
+            Balance: {user.balance}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
