@@ -107,10 +107,49 @@ _Neste caso o banco de dados é o MongoDB. [Baixe, instale e execute no o Mongo 
 > 1. Foi disponibilizado um arquivo com as rotas para facilitar a execução dos testes, basta importar o arquivo `thunder-collection_bank-of-cubos.json` no Thunder Client.
 > 2. O arquivo está na pasta `backend/src/utils/` do projeto.
 
-## Neste ponto o backend já deve está rodando, agora vamos para o Front-end...
+## Neste ponto o backend já deve está rodando, agora vamos ver como funciona nossa aplicação..
 
-_Com o clone do repositório já realizado, entre na pasta do frontend e execute os comandos abaixo:_
+# Visão Geral do Projeto:
 
+```mermaid
+classDiagram
+Localhost --> Port_3000 : Connection
+Port_3000 --> MongoDB : Connection
+Register --> Login : Register Success
+Login --> CreatAccount : Account Created
+CreatAccount --> Login : Access Token JWT
+CreatAccount --> InitialBalance : Balance
+InitialBalance : $ 0,00
+Transactions --> Transfer : Transfer?
+class Transactions{
+    + Withdraw
+    + Deposit
+    + Transfer
+}
+Transactions --> Withdraw : Withdraw?
+Transactions --> Deposit : Deposit?
+AccountBalance .. Account2
+class Localhost{
+    + Port:3000
+}
+AccountBalance --> Transactions : Transactions
+class AccountBalance{
+    Balance > $ 0,00
+}
+Account2 <--> Transfer : Account02
+```
+
+> 1. Para registrar um novo usuário, basta acessar a rota `/register` e preencher os campos com os dados do usuário.
+> 2. Após o registro, o usuário será redirecionado para a rota `/login` onde deverá preencher os campos com o usuário e senha cadastrados.
+> 3. Após o login, o usuário será redirecionado para a rota `/create-account` onde deverá preencher os campos com o nome da conta e o saldo inicial.
+> 4. Após a criação da conta, o usuário será redirecionado para a rota `/transactions` onde poderá realizar as operações financeiras.
+> 5. O usuário poderá realizar as operações de saque, depósito e transferência entre contas. E usar as demais rotas: `/withdraw`, `deposit` e `/transfer`, para realizar as operações financeiras.
+> 6. O usuário poderá visualizar o saldo atual da conta na rota `/info-account`.
+
+
+# O frontend ainda está em elaboração. Por favor aguardar
+
+<!--
 ```bash
 cd frontend
 ```
@@ -119,7 +158,8 @@ cd frontend
 
 > 1. Instale as dependências com `npm i`
 > 2. Instale o Axios + Routes com `npm i axios react-router-dom@6`
-> 3. E por ultimo, execute o comando `npm run dev` para rodar o frontend. (Que ainda está em desenvolvimento).
+> 3. E por ultimo, execute o comando `npm run dev` para rodar o frontend. (Que ainda está em desenvolvimento). -->
+
 
 ## Ferramentas e Tecnologias Utilizadas:
 
