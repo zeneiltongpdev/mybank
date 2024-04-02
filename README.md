@@ -1,8 +1,9 @@
-# Banco da Cubos Acadamy
+# My Bank
 
 ## Descrição do Projeto:
 
-O Banco da Cubos Academy é uma aplicação bancária online desenvolvida em Node.js com a utilização do framework Express e Banco de Dados utilizando o MongoDB.
+O My Bank foi um projeto desenvolvido durante um curso de Back-end da Cubos Academy.
+É uma aplicação bancária online desenvolvida em Node.js com a utilização do framework Express e Banco de Dados utilizando o MongoDB.
 É uma plataforma segura e eficiente que permite aos usuários realizar diversas operações financeiras, incluindo a criação de contas, gerenciamento de saldos e registro de transações.
 
 A aplicação oferece as seguintes funcionalidades principais:
